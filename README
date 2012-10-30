@@ -1,0 +1,28 @@
+INFO
+
+Yii Framework exension to display some system informations on Linux systems.
+
+
+INSTALLATION
+
+Place this file in protected/extensions/ and add to your config.php
+'components'=>array(
+     'YSystemInfo'=>array(
+         'class'=>'application.extensions.YSystemInfo',
+      ),
+),
+
+then use something like Yii::app()->YSystemInfo->functionName(); 
+
+Actually implemented:
+    * getInterfaceNames: returns an array with network interface names
+    * getInterfacesByType: returns all the interface of a specific type
+    * getPartitionSize: get partition size where the specified directory is mounted
+
+
+CREDITS
+
+Developed by Lorenzo Milesi <maxxer@yetopen.it>.
+Copyright 2012 YetOpen S.r.l. - Lecco 
+
+Includes part of code (c) Benjamin Holmberg with little modifications.
