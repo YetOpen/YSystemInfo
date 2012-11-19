@@ -75,7 +75,7 @@ class YSystemInfo extends CApplicationComponent
             return 0;
 
         // Recursely remove 
-        $c = trim ($this->runSystemCommand("/bin/df | /bin/grep \"$dir$\" | /usr/bin/awk '{print $2}' "));
+        $c = trim ($this->runSystemCommand("/bin/df $dir | /usr/bin/awk '{print $2}' "));
         if (empty ($c)) 
             return $this->getPartitionSize (dirname ($dir));
         else
